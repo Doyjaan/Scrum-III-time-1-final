@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Voluntários Entregadores</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: "Source Sans Pro", "Arial", sans-serif;
+            background-color: #f5f5f5; /* Fundo claro */
+            color: #333;
+            margin: 20px;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #ff6f61; /* Cor de destaque */
+            color: white;
+            padding: 20px;
+            text-align: center; /* Centraliza o texto do cabeçalho */
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        /* Navegação (Links) */
+        .nav-links {
+            display: flex; /* Alinha os links horizontalmente */
+            justify-content: center; /* Centraliza os links */
+            margin: 20px 0; /* Margem em cima e embaixo */
+        }
+
+        .nav-links a {
+            background-color: #ff6f61; /* Cor de fundo do botão */
+            color: white; /* Cor do texto */
+            padding: 10px 20px; /* Padding interno */
+            border-radius: 5px; /* Cantos arredondados */
+            text-decoration: none; /* Remove o sublinhado */
+            margin: 0 10px; /* Margem entre os links */
+            transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+        }
+
+        .nav-links a:hover {
+            background-color: #e85e51; /* Cor ao passar o mouse */
+            transform: scale(1.05); /* Leve aumento ao passar o mouse */
+        }
+
+        /* Formulário de cadastro de voluntários */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: left; /* Mantém o texto do formulário à esquerda */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center; /* Centraliza o título do formulário */
+        }
+
+        fieldset {
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold; /* Negrito para os rótulos */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box; /* Inclui padding e border no tamanho total */
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6f61; /* Cor de fundo do botão */
+            color: white; /* Cor do texto */
+            border: none;
+            border-radius: 5px; /* Cantos arredondados */
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s; /* Transição suave */
+        }
+
+        .submit-btn:hover {
+            background-color: #e85e51; /* Cor ao passar o mouse */
+        }
+
+        /* Mensagem de sucesso */
+        #entregadorMessage {
+            display: none; /* Esconde a mensagem inicialmente */
+            color: green; /* Cor do texto da mensagem */
+            text-align: center; /* Centraliza o texto */
+            margin-top: 20px; /* Margem superior */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cadastro de Voluntários Entregadores</h1>
+</header>
+
+<!-- Navegação -->
+<div class="nav-links">
+    <a href="index.html">Cadastro</a>
+    <a href="Fornecedores.html">Fornecedores</a>
+    <a href="Entregadores.html">Entregadores</a>
+</div>
+
+<form id="entregadorForm">
+    <!-- Informações Pessoais -->
+    <fieldset>
+        <legend>Informações Pessoais</legend>
+
+        <label for="nome_entregador">Nome Completo:</label>
+        <input type="text" id="nome_entregador" name="nome_entregador" placeholder="Digite seu nome completo" required>
+
+        <label for="email_entregador">E-mail:</label>
+        <input type="email" id="email_entregador" name="email_entregador" placeholder="exemplo@dominio.com" required>
+
+        <label for="telefone_entregador">Telefone:</label>
+        <input type="tel" id="telefone_entregador" name="telefone_entregador" placeholder="(XX) XXXXX-XXXX" required>
+
+        <label for="cnh_entregador">CNH (Carteira Nacional de Habilitação):</label>
+        <input type="file" id="cnh_entregador" name="cnh_entregador" accept=".pdf,.jpg,.png" required>
+    </fieldset>
+
+    <!-- Informações do Veículo -->
+    <fieldset>
+        <legend>Informações do Veículo</legend>
+
+        <label for="tipo_veiculo">Tipo de Veículo:</label>
+        <select id="tipo_veiculo" name="tipo_veiculo" required>
+            <option value="" disabled selected>Selecione o tipo de veículo</option>
+            <option value="carro">Carro</option>
+            <option value="moto">Moto</option>
+            <option value="bicicleta">Bicicleta</option>
+        </select>
+
+        <label for="placa_veiculo">Placa do Veículo:</label>
+        <input type="text" id="placa_veiculo" name="placa_veiculo" placeholder="Digite a placa do veículo" required>
+
+        <label for="documento_veiculo">Documento do Veículo:</label>
+        <input type="file" id="documento_veiculo" name="documento_veiculo" accept=".pdf,.jpg,.png" required>
+    </fieldset>
+
+    <input type="submit" value="Cadastrar" class="submit-btn">
+</form>
+
+<p id="entregadorMessage">Cadastro realizado com sucesso! Iremos entrar em contato para concluir seu cadastro.</p>
+
+<script>
+    document.getElementById('entregadorForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio do formulário
+        document.getElementById('entregadorMessage').style.display = 'block'; // Exibe a mensagem de sucesso
+        this.reset(); // Limpa o formulário
+    });
+</script>
+
+</body>
+</html>

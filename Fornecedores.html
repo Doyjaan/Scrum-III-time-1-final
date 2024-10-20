@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - De Coração para Coração</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"> <!-- Fonte cursiva -->
+    <link rel="stylesheet" href="../style.css"> <!-- Importa o CSS externo -->
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: "Source Sans Pro", "Arial", sans-serif;
+            background-color: #f5f5f5; /* Fundo claro */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #ff6f61; /* Cor de destaque */
+            color: white;
+            padding: 20px;
+            text-align: center; /* Centraliza o texto do cabeçalho */
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        /* Centralização do título de Fornecedores */
+        h2 {
+            text-align: center;
+            margin-top: 20px; /* Margem em cima */
+        }
+
+        /* Container para as caixas de fornecedores */
+        .fornecedores-container {
+            display: flex; /* Flexbox para layout em linha */
+            flex-wrap: wrap; /* Permite quebra de linha */
+            justify-content: center; /* Centraliza as caixas */
+            margin: 20px; /* Margem ao redor do container */
+        }
+
+        /* Caixas de fornecedores */
+        .fornecedor {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 15px;
+            max-width: 300px; /* Largura máxima para as caixas */
+            text-align: center; /* Centraliza o texto dentro da caixa */
+            flex: 1 1 30%; /* Flexível para ocupar até 30% do espaço disponível */
+        }
+
+        .fornecedor img {
+            width: 80px; /* Tamanho da imagem */
+            height: 80px; /* Tamanho da imagem */
+            margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+        }
+
+        /* Links de navegação */
+        .nav-links {
+            display: flex; /* Alinha os links horizontalmente */
+            justify-content: center; /* Centraliza os links */
+            margin: 20px 0; /* Margem em cima e embaixo */
+        }
+
+        .nav-links a {
+            background-color: #ff6f61; /* Cor de fundo do botão */
+            color: white; /* Cor do texto */
+            padding: 10px 20px; /* Padding interno */
+            border-radius: 5px; /* Cantos arredondados */
+            text-decoration: none; /* Remove o sublinhado */
+            margin: 0 10px; /* Margem entre os links */
+            transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+        }
+
+        .nav-links a:hover {
+            background-color: #e85e51; /* Cor ao passar o mouse */
+            transform: scale(1.05); /* Leve aumento ao passar o mouse */
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #f5f5f5;
+            color: #333;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Estilo para ícones de redes sociais */
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ff6f61;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #e85e51;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .fornecedor {
+                flex: 1 1 45%; /* Ocupa até 45% do espaço disponível */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .fornecedor {
+                flex: 1 1 100%; /* Ocupa 100% do espaço disponível */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="logo-title">De Coração para Coração</h1>
+    <nav>
+      <!-- Link para a seção de fornecedores -->
+    </nav>
+</header>
+
+<!-- Links de navegação -->
+<div class="nav-links">
+    <a href="index.html">Cadastro</a>
+    <a href="Fornecedores.html">Fornecedores</a>
+    <a href="Entregadores.html">Entregadores</a>
+</div>
+
+<!-- Seção de Fornecedores -->
+<section id="fornecedores">
+    <h2>Principais Fornecedores</h2>
+    <div class="fornecedores-container">
+        <div class="fornecedor">
+            <img src="pao de acuçar.png" alt="Grupo Pão de Açúcar">
+            <h3>Grupo Pão de Açúcar</h3>
+            <p><strong>O que fornece:</strong> Alimentos, bebidas, produtos de limpeza e higiene.</p>
+            <p><strong>Contato:</strong> (11) 3885-1234 | <a href="https://www.gpa.com.br" target="_blank">www.gpa.com.br</a></p>
+        </div>
+        <div class="fornecedor">
+            <img src="ambev.png" alt="Ambev">
+            <h3>Ambev</h3>
+            <p><strong>O que fornece:</strong> Bebidas alcoólicas e não alcoólicas.</p>
+            <p><strong>Contato:</strong> (11) 3885-1500 | <a href="https://www.ambev.com.br" target="_blank">www.ambev.com.br</a></p>
+        </div>
+        <div class="fornecedor">
+            <img src="BRF.png" alt="BRF">
+            <h3>BRF</h3>
+            <p><strong>O que fornece:</strong> Produtos alimentícios como carnes e alimentos congelados.</p>
+            <p><strong>Contato:</strong> (11) 3485-7000 | <a href="https://www.brf-global.com" target="_blank">www.brf-global.com</a></p>
+        </div>
+        <div class="fornecedor">
+            <img src="JBS.png" alt="JBS">
+            <h3>JBS</h3>
+            <p><strong>O que fornece:</strong> Carne bovina, suína e produtos alimentícios.</p>
+            <p><strong>Contato:</strong> (11) 3318-5000 | <a href="https://www.jbs.com.br" target="_blank">www.jbs.com.br</a></p>
+        </div>
+        <div class="fornecedor">
+            <img src="Mafrig.png" alt="Marfrig">
+            <h3>Marfrig</h3>
+            <p><strong>O que fornece:</strong> Produtos de carne bovina e derivados.</p>
+            <p><strong>Contato:</strong> (11) 3146-8000 | <a href="https://www.marfrig.com.br" target="_blank">www.marfrig.com.br</a></p>
+        </div>
+        <div class="fornecedor">
+            <img src="boticariotio.png" alt="OBoticário">
+            <h3>OBoticário</h3>
+            <p><strong>O que fornece:</strong> Cosméticos e produtos de beleza.</p>
+            <p><strong>Contato:</strong> (41) 3318-9000 | <a href="https://www.boticario.com.br" target="_blank">www.boticario.com.br</a></p>
+        </div>
+        <div class="fornecedor">
+            <img src="Correios.png" alt="Correios">
+            <h3>Correios</h3>
+            <p><strong>O que fornece:</strong> Serviços de entrega e correspondência.</p>
+            <p><strong>Contato:</strong> 0800-725-0100 | <a href="https://www.correios.com.br" target="_blank">www.correios.com.br</a></p>
+        </div>
+        <div class="fornecedor">
+            <img src="marabraz.png" alt="Marabraz">
+            <h3>Marabraz</h3>
+            <p><strong>O que fornece:</strong> Móveis e decoração.</p>
+            <p><strong>Contato:</strong> (11) 4004-2200 | <a href="https://www.marabraz.com.br" target="_blank">www.marabraz.com.br</a></p>
+        </div>
+        <div class="fornecedor">
+            <img src="casas bahia.png" alt="Casas Bahia">
+            <h3>Casas Bahia</h3>
+            <p><strong>O que fornece:</strong> Eletrodomésticos, móveis e eletrônicos.</p>
+            <p><strong>Contato:</strong> 0800-941-1000 | <a href="https://www.casasbahia.com.br" target="_blank">www.casasbahia.com.br</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- Rodapé com ícones de redes sociais -->
+<footer>
+    <p>Siga-nos nas redes sociais:</p>
+    <div class="social-icons">
+        <a href="#" target="_blank">
+            <img src="facebook.png" alt="Facebook">
+        </a>
+        <a href="#" target="_blank">
+            <img src="x.png" alt="Twitter">
+        </a>
+        <a href="#" target="_blank">
+            <img src="insta.jfif" alt="Instagram">
+        </a>
+        <a href="#" target="_blank">
+            <img src="linke.png" alt="LinkedIn">
+        </a>
+    </div>
+</footer>
+
+<script src="../tabs.js"></script> <!-- Importa o JavaScript externo -->
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* Estilos gerais */
+body {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    background-color: #f5f5f5; /* Fundo claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ff6f61; /* Cor de destaque */
+    color: white;
+    padding: 20px;
+    text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Navegação (Tabs) */
+.tab {
+    overflow: hidden;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 2px -2px gray;
+    text-align: center; /* Centraliza os botões de navegação */
+}
+
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    color: #333;
+}
+
+.tab button:hover {
+    color: #ff6f61;
+}
+
+.tab button.active {
+    border-bottom: 3px solid #ff6f61;
+    color: #ff6f61;
+}
+
+/* Estilos para os links de Cadastro e Fornecedores */
+.nav-links {
+    display: flex; /* Alinha os links horizontalmente */
+    justify-content: center; /* Centraliza os links */
+    margin: 20px 0; /* Margem em cima e embaixo */
+}
+
+.nav-links a {
+    background-color: #ff6f61; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Padding interno */
+    border-radius: 5px; /* Cantos arredondados */
+    text-decoration: none; /* Remove o sublinhado */
+    margin: 0 10px; /* Margem entre os links */
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+}
+
+.nav-links a:hover {
+    background-color: #e85e51; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+
+/* Formulários */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left; /* Mantém o texto do formulário à esquerda */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label, input, select, textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+}
+
+/* Centralização das seções de empresas e ONGs cadastradas */
+.cadastradas {
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Adiciona margem em cima e embaixo */
+}
+
+/* Botões */
+input[type="submit"] {
+    background-color: #ff6f61;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #e85e51;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f5f5f5;
+    color: #333;
+    margin-top: 20px;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilo para ícones de redes sociais */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ff6f61;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e85e51;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
